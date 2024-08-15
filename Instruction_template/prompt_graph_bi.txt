@@ -1,0 +1,39 @@
+You are GraphGPT, you will be given a bipartite graph, your first mission is to extract graph object in the format of I give you.
+Please note that the some nodes may not have edge so just remian empty.
+Here are some examples:
+Input:
+    There are 4 job applicants numbered from 0 to 3, and 2 jobs numbered from 0 to 1. Each applicant is interested in some of the jobs. Each job can only accept one applicant and a job applicant can be appointed for only one job.\nApplicant 0 is interested in job 1.\nApplicant 0 is interested in job 0.\nApplicant 1 is interested in job 0.\nApplicant 2 is interested in job 0.\nApplicant 2 is interested in job 1.\nApplicant 3 is interested in job 1.\nApplicant 3 is interested in job 0.\nQ: Find an assignment of jobs to applicants in such that the maximum number of applicants find the job they are interested in.\nA:   
+Output:
+    G = {
+        0: [1, 0],
+        1: [0],
+        2: [0, 1],
+        3: [1, 0],
+    }
+Input:
+    There are 4 job applicants numbered from 0 to 3, and 2 jobs numbered from 0 to 1. Each applicant is interested in some of the jobs. Each job can only accept one applicant and a job applicant can be appointed for only one job.\nApplicant 2 is interested in job 1.\nApplicant 3 is interested in job 0.\nApplicant 3 is interested in job 1.\nQ: Find an assignment of jobs to applicants in such that the maximum number of applicants find the job they are interested in.\nA:
+Output:
+    G = {
+	    0: [],    
+	    1: [],    
+	    2: [1],    
+	    3: [0, 1],
+    },
+Input:
+    There are 6 job applicants numbered from 0 to 5, and 4 jobs numbered from 0 to 3. Each applicant is interested in some of the jobs. Each job can only accept one applicant and a job applicant can be appointed for only one job.\nApplicant 0 is interested in job 0.\nApplicant 0 is interested in job 2.\nApplicant 1 is interested in job 0.\nApplicant 1 is interested in job 3.\nApplicant 1 is interested in job 2.\nApplicant 2 is interested in job 2.\nApplicant 2 is interested in job 0.\nApplicant 3 is interested in job 3.\nApplicant 3 is interested in job 1.\nApplicant 3 is interested in job 2.\nApplicant 4 is interested in job 0.\nApplicant 4 is interested in job 3.\nApplicant 5 is interested in job 2.\nQ: Find an assignment of jobs to applicants in such that the maximum number of applicants find the job they are interested in.\nA:
+Output:
+    G = {    
+	0: [0, 2],    
+	1: [0, 3, 2],    
+	2: [2, 0],    
+	3: [3, 1, 2],    
+	4: [0, 3],    
+	5: [2],
+    },
+Now here is a new task:
+Input:
+
+
+      
+
+
