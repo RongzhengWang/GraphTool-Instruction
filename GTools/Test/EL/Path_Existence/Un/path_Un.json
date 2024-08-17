@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_0.edgelist\". The task is: you need to Confirm if a path can be found between two nodes. The nodes in question are: path_source=13 , path_target=0.\n\n### Response:",
+        "path": "(13, 0)",
+        "answer": true,
+        "description": "Confirm if a path can be found between two nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_1.edgelist\". The task is: you need to Determine whether a route exists between two specific nodes. The nodes in question are: path_source=15 , path_target=16.\n\n### Response:",
+        "path": "(15, 16)",
+        "answer": false,
+        "description": "Determine whether a route exists between two specific nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_2.edgelist\". The task is: you need to Determine whether a route exists between two specific nodes. The nodes in question are: path_source=1 , path_target=20.\n\n### Response:",
+        "path": "(1, 20)",
+        "answer": true,
+        "description": "Determine whether a route exists between two specific nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_3.edgelist\". The task is: you need to Check if there is a path between two nodes in the graph. The nodes in question are: path_source=10 , path_target=12.\n\n### Response:",
+        "path": "(10, 12)",
+        "answer": false,
+        "description": "Check if there is a path between two nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_4.edgelist\". The task is: you need to Verify the existence of a path from one node to another. The nodes in question are: path_source=9 , path_target=7.\n\n### Response:",
+        "path": "(9, 7)",
+        "answer": true,
+        "description": "Verify the existence of a path from one node to another.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_5.edgelist\". The task is: you need to Check if there is a path between two nodes in the graph. The nodes in question are: path_source=9 , path_target=22.\n\n### Response:",
+        "path": "(9, 22)",
+        "answer": false,
+        "description": "Check if there is a path between two nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_6.edgelist\". The task is: you need to Identify whether a path exists linking two nodes. The nodes in question are: path_source=27 , path_target=21.\n\n### Response:",
+        "path": "(27, 21)",
+        "answer": true,
+        "description": "Identify whether a path exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_7.edgelist\". The task is: you need to Confirm if a path can be found between two nodes. The nodes in question are: path_source=21 , path_target=7.\n\n### Response:",
+        "path": "(21, 7)",
+        "answer": false,
+        "description": "Confirm if a path can be found between two nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_8.edgelist\". The task is: you need to Identify whether a path exists linking two nodes. The nodes in question are: path_source=21 , path_target=20.\n\n### Response:",
+        "path": "(21, 20)",
+        "answer": true,
+        "description": "Identify whether a path exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Path_Existence/Un/data/task_9.edgelist\". The task is: you need to Confirm if a path can be found between two nodes. The nodes in question are: path_source=0 , path_target=41.\n\n### Response:",
+        "path": "(0, 41)",
+        "answer": false,
+        "description": "Confirm if a path can be found between two nodes.",
+        "file_path": "../GTools/Test/EL/Path_Existence/Un/data/task_9.edgelist"
+    }
+]

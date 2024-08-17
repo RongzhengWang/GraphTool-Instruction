@@ -1,5 +1,9 @@
+# Our fine-tuning parameter settings are as follows.
+# model_path= Llama3/model
+# output_model= Llama3/lora_weight
+
 ### model
-model_name_or_path: /home/user/wrz/Graph Tools/LLaMA/LLaMA3-model
+model_name_or_path: ${model_path}
 
 ### method
 stage: sft
@@ -8,7 +12,7 @@ finetuning_type: lora
 lora_target: all
 
 ### dataset
-dataset: merged_EL
+dataset: Graph, BGA, PGQ
 template: llama3
 cutoff_len: 4096
 max_samples: 100000
@@ -16,7 +20,7 @@ overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: saves/llama3-8b/lora/GT_EL
+output_dir: ${output_model}
 logging_steps: 10
 save_steps: 500
 plot_loss: true

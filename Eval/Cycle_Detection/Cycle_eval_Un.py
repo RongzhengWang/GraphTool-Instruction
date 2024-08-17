@@ -92,5 +92,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.graph_path, args.ans_path)
-
-#python Cycle_eval_Un.py  --graph_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Cycle_Detection/Un/ans_graph_Un.json --ans_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Cycle_Detection/Un/ans_Un.json

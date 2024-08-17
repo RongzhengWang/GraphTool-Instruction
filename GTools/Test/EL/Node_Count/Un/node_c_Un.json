@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_0.edgelist\". The task is: you need to Count the total number of nodes in the graph.\n\n### Response:",
+        "answer": 11,
+        "description": "Count the total number of nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_1.edgelist\". The task is: you need to Determine the number of nodes in the graph.\n\n### Response:",
+        "answer": 12,
+        "description": "Determine the number of nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_2.edgelist\". The task is: you need to Calculate the number of nodes present in the graph.\n\n### Response:",
+        "answer": 22,
+        "description": "Calculate the number of nodes present in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_3.edgelist\". The task is: you need to Find out how many vertices the graph has.\n\n### Response:",
+        "answer": 25,
+        "description": "Find out how many vertices the graph has.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_4.edgelist\". The task is: you need to Count the total number of nodes in the graph.\n\n### Response:",
+        "answer": 30,
+        "description": "Count the total number of nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_5.edgelist\". The task is: you need to Find out how many vertices the graph has.\n\n### Response:",
+        "answer": 29,
+        "description": "Find out how many vertices the graph has.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_6.edgelist\". The task is: you need to Calculate the number of nodes present in the graph.\n\n### Response:",
+        "answer": 31,
+        "description": "Calculate the number of nodes present in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_7.edgelist\". The task is: you need to Calculate the number of nodes present in the graph.\n\n### Response:",
+        "answer": 31,
+        "description": "Calculate the number of nodes present in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_8.edgelist\". The task is: you need to Ascertain the number of vertices in the graph.\n\n### Response:",
+        "answer": 46,
+        "description": "Ascertain the number of vertices in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Count/Un/data/task_9.edgelist\". The task is: you need to Count the total number of nodes in the graph.\n\n### Response:",
+        "answer": 44,
+        "description": "Count the total number of nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Count/Un/data/task_9.edgelist"
+    }
+]

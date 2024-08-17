@@ -1,0 +1,29 @@
+{
+    "is_node_graphExistance": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph= G, node=1)\n###",
+    "is_path_graphExistance": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph=G, path_source=0, path_target=1)\n###",
+    "is_edge_graphExistance": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph= G, edge_source=0 , edge_target=1)\n###",
+    "cycle_check_graphExistance": 
+    "Template content for cycle_check_graphExistance",
+    "number_of_edges_graphCount": 
+    "Template content for number_of_edges_graphCount",
+    "degree_graphCount": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph=G, node=1)\n###",
+    "number_of_nodes_graphCount": 
+    "Template content for number_of_nodes_graphCount",
+    "shortest_path": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, path_source=0 , path_target=1)\n###",
+    "maximum_triangle_sum": 
+    "Template content for maximum_triangle_sum",
+    "maximum_flow": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, source_node=0 , sink_node=1)\n###",
+    "topological_sort": 
+    "Template content for topological_sort",
+    "GNN":
+    "Template content for GNN",
+    "Matching":
+    "Template content for Matching"
+
+}

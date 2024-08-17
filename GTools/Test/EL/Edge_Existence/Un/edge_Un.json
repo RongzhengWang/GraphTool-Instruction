@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_0.edgelist\". The task is: you need to Check if the specified edge exists in the graph. The nodes in question are: edge_source=8 , edge_target=5.\n\n### Response:",
+        "edge": "(8, 5)",
+        "answer": true,
+        "description": "Check if the specified edge exists in the graph.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_1.edgelist\". The task is: you need to Confirm if an edge can be found between two nodes. The nodes in question are: edge_source=2 , edge_target=0.\n\n### Response:",
+        "edge": "(2, 0)",
+        "answer": false,
+        "description": "Confirm if an edge can be found between two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_2.edgelist\". The task is: you need to Verify the existence of a specific edge in the graph. The nodes in question are: edge_source=12 , edge_target=15.\n\n### Response:",
+        "edge": "(12, 15)",
+        "answer": true,
+        "description": "Verify the existence of a specific edge in the graph.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_3.edgelist\". The task is: you need to Identify whether an edge exists linking two nodes. The nodes in question are: edge_source=2 , edge_target=20.\n\n### Response:",
+        "edge": "(2, 20)",
+        "answer": false,
+        "description": "Identify whether an edge exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_4.edgelist\". The task is: you need to Check if the specified edge exists in the graph. The nodes in question are: edge_source=16 , edge_target=6.\n\n### Response:",
+        "edge": "(16, 6)",
+        "answer": true,
+        "description": "Check if the specified edge exists in the graph.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_5.edgelist\". The task is: you need to Identify whether an edge exists linking two nodes. The nodes in question are: edge_source=26 , edge_target=1.\n\n### Response:",
+        "edge": "(26, 1)",
+        "answer": false,
+        "description": "Identify whether an edge exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_6.edgelist\". The task is: you need to Verify the existence of a specific edge in the graph. The nodes in question are: edge_source=15 , edge_target=32.\n\n### Response:",
+        "edge": "(15, 32)",
+        "answer": true,
+        "description": "Verify the existence of a specific edge in the graph.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_7.edgelist\". The task is: you need to Identify whether an edge exists linking two nodes. The nodes in question are: edge_source=28 , edge_target=17.\n\n### Response:",
+        "edge": "(28, 17)",
+        "answer": false,
+        "description": "Identify whether an edge exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_8.edgelist\". The task is: you need to Confirm if an edge can be found between two nodes. The nodes in question are: edge_source=35 , edge_target=30.\n\n### Response:",
+        "edge": "(35, 30)",
+        "answer": true,
+        "description": "Confirm if an edge can be found between two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Existence/Un/data/task_9.edgelist\". The task is: you need to Identify whether an edge exists linking two nodes. The nodes in question are: edge_source=6 , edge_target=7.\n\n### Response:",
+        "edge": "(6, 7)",
+        "answer": false,
+        "description": "Identify whether an edge exists linking two nodes.",
+        "file_path": "../GTools/Test/EL/Edge_Existence/Un/data/task_9.edgelist"
+    }
+]

@@ -1,6 +1,0 @@
-You have chosen an API:is_path_graphExistance
-The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.
-The example is as follow:
-###
-API_Input: (graph=G, path_source=0, path_target=13)
-###

@@ -95,5 +95,3 @@ if __name__ == "__main__":
 
     main(args.graph_path, args.ans_path)
 
-
-# python Node_C_eval_Un.py --graph_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Node_Count/Un/ans_graph_Un.json --ans_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Node_Count/Un/ans_Un.json

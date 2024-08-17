@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_0.edgelist\". The task is: you need to Determine the maximum flow between two specific nodes in the graph. The nodes in question are: source_node=5 , sink_node=13.\n\n### Response:",
+        "path": "(5,13)",
+        "answer": 314,
+        "description": "Determine the maximum flow between two specific nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_1.edgelist\". The task is: you need to Ascertain the maximum flow value between two nodes. The nodes in question are: source_node=3 , sink_node=13.\n\n### Response:",
+        "path": "(3,13)",
+        "answer": 309,
+        "description": "Ascertain the maximum flow value between two nodes.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_2.edgelist\". The task is: you need to Ascertain the maximum flow value between two nodes. The nodes in question are: source_node=17 , sink_node=3.\n\n### Response:",
+        "path": "(17,3)",
+        "answer": 559,
+        "description": "Ascertain the maximum flow value between two nodes.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_3.edgelist\". The task is: you need to Calculate the maximum flow from one node to another. The nodes in question are: source_node=13 , sink_node=20.\n\n### Response:",
+        "path": "(13,20)",
+        "answer": 625,
+        "description": "Calculate the maximum flow from one node to another.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_4.edgelist\". The task is: you need to Get the maximum flow between two given vertices. The nodes in question are: source_node=18 , sink_node=7.\n\n### Response:",
+        "path": "(18,7)",
+        "answer": 678,
+        "description": "Get the maximum flow between two given vertices.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_5.edgelist\". The task is: you need to Calculate the maximum flow from one node to another. The nodes in question are: source_node=3 , sink_node=16.\n\n### Response:",
+        "path": "(3,16)",
+        "answer": 784,
+        "description": "Calculate the maximum flow from one node to another.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_6.edgelist\". The task is: you need to Determine the maximum flow between two specific nodes in the graph. The nodes in question are: source_node=24 , sink_node=27.\n\n### Response:",
+        "path": "(24,27)",
+        "answer": 344,
+        "description": "Determine the maximum flow between two specific nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_7.edgelist\". The task is: you need to Ascertain the maximum flow value between two nodes. The nodes in question are: source_node=13 , sink_node=21.\n\n### Response:",
+        "path": "(13,21)",
+        "answer": 520,
+        "description": "Ascertain the maximum flow value between two nodes.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_8.edgelist\". The task is: you need to Calculate the maximum flow from one node to another. The nodes in question are: source_node=4 , sink_node=22.\n\n### Response:",
+        "path": "(4,22)",
+        "answer": 436,
+        "description": "Calculate the maximum flow from one node to another.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Flow/Di/data/task_9.edgelist\". The task is: you need to Calculate the maximum flow from one node to another. The nodes in question are: source_node=30 , sink_node=42.\n\n### Response:",
+        "path": "(30,42)",
+        "answer": 353,
+        "description": "Calculate the maximum flow from one node to another.",
+        "file_path": "../GTools/Test/EL/Flow/Di/data/task_9.edgelist"
+    }
+]

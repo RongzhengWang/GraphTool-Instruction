@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_0.edgelist\". The task is: you need to determine Whether the graph contains a circuit.\n\n### Response:",
+        "answer": true,
+        "description": "Whether the graph contains a circuit."
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_1.edgelist\". The task is: you need to determine Whether there is a loop in the graph.\n\n### Response:",
+        "answer": false,
+        "description": "Whether there is a loop in the graph."
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_2.edgelist\". The task is: you need to determine Whether there is a loop in the graph.\n\n### Response:",
+        "answer": true,
+        "description": "Whether there is a loop in the graph."
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_3.edgelist\". The task is: you need to determine Whether the graph contains a circuit.\n\n### Response:",
+        "answer": false,
+        "description": "Whether the graph contains a circuit."
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_4.edgelist\". The task is: you need to determine Whether there is a loop in the graph.\n\n### Response:",
+        "answer": true,
+        "description": "Whether there is a loop in the graph."
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_5.edgelist\". The task is: you need to determine Whether there is a loop in the graph.\n\n### Response:",
+        "answer": false,
+        "description": "Whether there is a loop in the graph."
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_6.edgelist\". The task is: you need to determine Whether the graph contains a circuit.\n\n### Response:",
+        "answer": true,
+        "description": "Whether the graph contains a circuit."
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_7.edgelist\". The task is: you need to determine Whether the graph contains a cycle.\n\n### Response:",
+        "answer": false,
+        "description": "Whether the graph contains a cycle."
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_8.edgelist\". The task is: you need to determine Whether there is a loop in the graph.\n\n### Response:",
+        "answer": true,
+        "description": "Whether there is a loop in the graph."
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Cycle_Detection/Un/data/task_9.edgelist\". The task is: you need to determine Whether the graph contains a circuit.\n\n### Response:",
+        "answer": false,
+        "description": "Whether the graph contains a circuit."
+    }
+]

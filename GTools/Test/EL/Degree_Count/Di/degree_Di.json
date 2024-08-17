@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_0.edgelist\". The task is: you need to Calculate the degree of a given vertex. The node in question is node=6.\n\n### Response:",
+        "node": 6,
+        "answer": 12,
+        "description": "Calculate the degree of a given vertex."
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_1.edgelist\". The task is: you need to Identify the degree of a certain vertex in the graph. The node in question is node=5.\n\n### Response:",
+        "node": 5,
+        "answer": 17,
+        "description": "Identify the degree of a certain vertex in the graph."
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_2.edgelist\". The task is: you need to Ascertain the number of connections for a specific node. The node in question is node=22.\n\n### Response:",
+        "node": 22,
+        "answer": 10,
+        "description": "Ascertain the number of connections for a specific node."
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_3.edgelist\". The task is: you need to Find out the number of edges connected to a particular node. The node in question is node=18.\n\n### Response:",
+        "node": 18,
+        "answer": 12,
+        "description": "Find out the number of edges connected to a particular node."
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_4.edgelist\". The task is: you need to Calculate the degree of a given vertex. The node in question is node=19.\n\n### Response:",
+        "node": 19,
+        "answer": 9,
+        "description": "Calculate the degree of a given vertex."
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_5.edgelist\". The task is: you need to Find out the number of edges connected to a particular node. The node in question is node=27.\n\n### Response:",
+        "node": 27,
+        "answer": 12,
+        "description": "Find out the number of edges connected to a particular node."
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_6.edgelist\". The task is: you need to Ascertain the number of connections for a specific node. The node in question is node=18.\n\n### Response:",
+        "node": 18,
+        "answer": 5,
+        "description": "Ascertain the number of connections for a specific node."
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_7.edgelist\". The task is: you need to Find out the number of edges connected to a particular node. The node in question is node=16.\n\n### Response:",
+        "node": 16,
+        "answer": 6,
+        "description": "Find out the number of edges connected to a particular node."
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_8.edgelist\". The task is: you need to Find out the number of edges connected to a particular node. The node in question is node=49.\n\n### Response:",
+        "node": 49,
+        "answer": 15,
+        "description": "Find out the number of edges connected to a particular node."
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven a directed graph,the edges are in an edgelist file, the path is \"../GTools/Test/EL/Degree_Count/Di/data/task_9.edgelist\". The task is: you need to Determine the degree of a specific node in the graph. The node in question is node=15.\n\n### Response:",
+        "node": 15,
+        "answer": 10,
+        "description": "Determine the degree of a specific node in the graph."
+    }
+]

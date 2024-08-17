@@ -102,5 +102,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.graph_path, args.ans_path)
-
-#python Shortest_eval_Di.py --graph_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Shortest_Path/Di/ans_graph_Di.json --ans_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Shortest_Path/Di/ans_Di.json

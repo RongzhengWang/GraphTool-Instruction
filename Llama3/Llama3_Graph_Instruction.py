@@ -7,11 +7,11 @@ from tqdm import tqdm
 import argparse
 
 def main(args):
-    # 设置 CUDA 设备
+    # Set CUDA devices
     os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_devices
     model_path = args.model_path
 
-    # 初始化生成文本的 pipeline
+    # Initialize the text generation pipeline
     pipeline = transformers.pipeline(
         "text-generation",
         model=model_path,
@@ -19,11 +19,11 @@ def main(args):
         device_map="auto",
     )
 
-    # 读取 prompt 模板
+    # Read the prompt template
     with open(args.instruction_path, 'r', encoding='utf-8') as file:
         prompt = file.read()
 
-    # 检查并读取现有的 JSON 文件内容
+    # Check and read the existing JSON file content
     if os.path.exists(args.output_path):
         with open(args.output_path, 'r') as file:
             try:
@@ -33,13 +33,13 @@ def main(args):
     else:
         data = []
 
-    # 读取所有任务文件
+    # Read all task files
     with open(args.input_path, 'r', encoding='utf-8') as file:
         files = json.load(file)
 
     print(len(files))
 
-    # 遍历每个对象
+    # Iterate over each object
     for obj in tqdm(files):
         message = obj['prompt']
         messages = [
@@ -68,11 +68,9 @@ def main(args):
             'firstanswer': firstanswer,
         })
 
-        # 将更新后的内容写回文件
         with open(args.output_path, 'w') as file:
             json.dump(data, file, indent=4)
 
-        print("JSON 文件已更新。")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate text using a pre-trained model.")
@@ -87,7 +85,3 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args)
-
-
-
-#python generate_text.py --cuda_devices "6,7" --model_path "/home/data2t2/wrz/LLaMA/llama3_GLandEX" --instruction_path "/home/data2t2/wrz/Graph Tools/prompt_template/prompt_graph3.txt" --output_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Cycle_Detection/Di/ans_graph_Di.json" --input_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Cycle_Detection/Di/cycle_Di.json" --max_new_tokens 4096 --temperature 0.7 --top_p 1

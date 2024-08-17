@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_0.edgelist\". The task is: you need to Check if the node exists in the graph. The node in question is node=3.\n\n### Response:",
+        "node": 3,
+        "answer": true,
+        "description": "Check if the node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_1.edgelist\". The task is: you need to Identify whether a certain node exists in the graph. The node in question is node=5.\n\n### Response:",
+        "node": 5,
+        "answer": true,
+        "description": "Identify whether a certain node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_2.edgelist\". The task is: you need to Determine whether the node is part of the graph. The node in question is node=8.\n\n### Response:",
+        "node": 8,
+        "answer": true,
+        "description": "Determine whether the node is part of the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_3.edgelist\". The task is: you need to Check if the node exists in the graph. The node in question is node=13.\n\n### Response:",
+        "node": 13,
+        "answer": true,
+        "description": "Check if the node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_4.edgelist\". The task is: you need to Determine whether the node is part of the graph. The node in question is node=26.\n\n### Response:",
+        "node": 26,
+        "answer": true,
+        "description": "Determine whether the node is part of the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_5.edgelist\". The task is: you need to Determine whether the node is part of the graph. The node in question is node=34.\n\n### Response:",
+        "node": 34,
+        "answer": false,
+        "description": "Determine whether the node is part of the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_6.edgelist\". The task is: you need to Identify whether a certain node exists in the graph. The node in question is node=37.\n\n### Response:",
+        "node": 37,
+        "answer": false,
+        "description": "Identify whether a certain node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_7.edgelist\". The task is: you need to Check if the node exists in the graph. The node in question is node=38.\n\n### Response:",
+        "node": 38,
+        "answer": false,
+        "description": "Check if the node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_8.edgelist\". The task is: you need to Check if the node exists in the graph. The node in question is node=48.\n\n### Response:",
+        "node": 48,
+        "answer": false,
+        "description": "Check if the node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Node_Existence/Un/data/task_9.edgelist\". The task is: you need to Identify whether a certain node exists in the graph. The node in question is node=46.\n\n### Response:",
+        "node": 46,
+        "answer": false,
+        "description": "Identify whether a certain node exists in the graph.",
+        "file_path": "../GTools/Test/EL/Node_Existence/Un/data/task_9.edgelist"
+    }
+]

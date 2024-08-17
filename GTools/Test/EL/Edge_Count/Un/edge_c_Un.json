@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_0.edgelist\". The task is: you need to Determine the number of edges in the graph.\n\n### Response:",
+        "answer": 27,
+        "description": "Determine the number of edges in the graph."
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_1.edgelist\". The task is: you need to Determine the number of edges in the graph.\n\n### Response:",
+        "answer": 50,
+        "description": "Determine the number of edges in the graph."
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_2.edgelist\". The task is: you need to Calculate the number of edges in the graph.\n\n### Response:",
+        "answer": 98,
+        "description": "Calculate the number of edges in the graph."
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_3.edgelist\". The task is: you need to Find out how many edges the graph has.\n\n### Response:",
+        "answer": 112,
+        "description": "Find out how many edges the graph has."
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_4.edgelist\". The task is: you need to Calculate the number of edges in the graph.\n\n### Response:",
+        "answer": 176,
+        "description": "Calculate the number of edges in the graph."
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_5.edgelist\". The task is: you need to Count the total number of edges in the graph.\n\n### Response:",
+        "answer": 141,
+        "description": "Count the total number of edges in the graph."
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_6.edgelist\". The task is: you need to Ascertain the number of edges present in the graph.\n\n### Response:",
+        "answer": 187,
+        "description": "Ascertain the number of edges present in the graph."
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_7.edgelist\". The task is: you need to Find out how many edges the graph has.\n\n### Response:",
+        "answer": 206,
+        "description": "Find out how many edges the graph has."
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_8.edgelist\". The task is: you need to Ascertain the number of edges present in the graph.\n\n### Response:",
+        "answer": 818,
+        "description": "Ascertain the number of edges present in the graph."
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, The edges are in an edgelist file, the path is \"../GTools/Test/EL/Edge_Count/Un/data/task_9.edgelist\". The task is: you need to Count the total number of edges in the graph.\n\n### Response:",
+        "answer": 484,
+        "description": "Count the total number of edges in the graph."
+    }
+]

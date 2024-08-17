@@ -95,5 +95,3 @@ if __name__ == "__main__":
 
     main(args.graph_path, args.ans_path)
 
-
-# python Topo_eval.py  --graph_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Topo/ans_graph.json --ans_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Topo/ans.json

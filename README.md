@@ -24,16 +24,10 @@ This project aims to leverage **GraphTool-Instruction**, an innovative instructi
 
 
 
-
-<!-- For more technical details, kindly refer to the [paper](https://arxiv.org/abs/2310.13023) and the project [website](https://GraphTool-Instruction.github.io/) of our Graph.  -->
-
-
 ### Data Release
 
-Please download our dataset using the following link: [Huggingface](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). 
+Please download our model and datasets using the following link: [Huggingface](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). 
  
-
-
 
 ## Getting Started
 
@@ -51,6 +45,9 @@ Please download our dataset using the following link: [Huggingface](https://hugg
   * <a href='#Prepare Pre-trained Checkpoint'>5.1. Prepare Pre-trained Checkpoint</a>
   * <a href='#Self-Supervised Instruction Tuning'>5.2. Self-Supervised Instruction Tuning</a>
   * <a href='#Export Model'>5.3. Export Model</a>
+* <a href='#Function Calling Reasoning'>6. Function Calling Reasoning </a>
+  * <a href='#GPT'>6.1. GPT</a>
+  * <a href='#GLM'>6.2. GLM</a>
 
 
 
@@ -63,62 +60,55 @@ Please download our dataset using the following link: [Huggingface](https://hugg
 ### 1. Code Structure <a href='#all_catelogue'>[Back to Top]</a>
 
 ```
-.
 ├── README.md
 ├── GTools
-│   ├── Train
-│   │   ├── WL
-│   │   └── EL
-│   └── Test
-│       ├── WL
-│       └── EL
+│   ├── Test
+│   └── Train
 ├── GTools_Generation
-│   ├── WL
-
-│   └── EL
-
+│   ├── EL
+│   ├── EL.bash
+│   ├── WL
+│   └── WL.bash
 ├── GraphForge
-│   ├── run
-│   │   ├── GF_Graph_Instruction.py
-│   │   ├── GF_Task_Instruction.py
-│   │   └── GF_Task_Para_Instruction.py
-├── Llama3
-│   ├── run
-│   │   ├── Llama3_Graph_Instruction.py
-│   │   ├── Llama3_Task_Instruction.py
-│   │   └── Llama3_Task_Para_Instruction.py
-├── Llama3.1
-│   ├── run
-│   │   ├── Llama3.1_Graph_Instruction.py
-│   │   ├── Llama3.1_Task_Instruction.py
-│   │   └── Llama3.1_Task_Para_Instruction.py
-├── GLM4
-│   ├── run
-│   │   ├── GLM4_Graph_Instruction.py
-│   │   ├── GLM4_Task_Instruction.py
-│   │   └── GLM4_Task_Para_Instruction.py
+│   ├── GF_Graph_Instruction.py
+│   ├── GF_Task_Instruction.py
+│   └── GF_Task_Para_Instruction.py
+├── GraphForge_test_WL
+│   ├── Cycle_Detection
+│   ├── ···
+│   └── Triangle
 ├── Eval
-│   ├── Cycle_detection.py
-│   ├── ...
-│   └── Triangle_sum.py
-├── train
-│   ├── graphchat_trainer.py
-│   ├── llama_flash_attn_monkey_patch.py
-│   ├── train_graph.py
-│   ├── train_lora.py
-│   └── train_mem.py
+│   ├── Cycle_Detection
+│   ├── ···
+│   └── Triangle
 ├── Instruction_template
-│   ├── Graph_Instructon.txt
-│   ├── Task_Instructon.txt
-│   ├── Para_Instructon.txt
-│   └── api_name_to_template.json
+│   ├── Graph_Instructon_EL.txt
+│   ├── Graph_Instructon_WL.txt
+│   ├── Para_Instructon.json
+│   └── Task_Instructon.txt
+├── Train
+│   ├── dataset_info.json
+│   ├── llama3_lora_sft_merge.yaml
+│   └── llama3_lora_sft_train.yaml
+├── Llama3
+│   ├── Llama3_Graph_Instruction.py
+│   ├── Llama3_Task_Instruction.py
+│   └── Llama3_Task_Para_Instruction.py
+├── Llama3.1
+│   ├── Llama3.1_Graph_Instruction.py
+│   ├── Llama3.1_Task_Instruction.py
+│   └── Llama3.1_Task_Para_Instruction.py
+├── GLM4
+│   ├── GLM4_Graph_Instruction.py
+│   ├── GLM4_Task_Instruction.py
+│   └── GLM4_Task_Para_Instruction.py
+├── Function_Calling
+│   ├── GLM_FC.py
+│   └── GPT_FC.py
+└── requirements.txt
+
 
 ```
-<!-- 
-│   ├── eval
-│   │   ├── Cycle_detection.py
-│   │   ├── ...
-│   │   └── Triangle_sum.py -->
 
 
 <span id='Environment Preparation'/>
@@ -155,7 +145,7 @@ To construct the Task-Instruction, we manually create a tool set. For each tool,
 For PGQ-Tasks, we specifically employ Parameter-Instruction to further standardize the format of parameters extracted by Task-Instruction. At first, We propose *Tool Template Retriever*, which identifies the tool name based on previous Task-Instruction and then retrieves the corresponding tool template from the tool set. Second, we combine the searched tool template with Parameter-Instruction as a new input to get highly accurate tool parameters. An example of the Parameter-Instruction is presented as follows:
 ```shell
 "shortest_path": 
-    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, path_source=0 , path_target=1 )\n###",
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, path_source=0 , path_target=1)\n###",
     
 ```
 
@@ -177,53 +167,72 @@ We design graph task generation code for eleven categories, comprising a total o
 - **Balanced answers**: For graph reasoning tasks that determine truth or falsehood, we ensure an even distribution of answers during the graph generation process. This approach aims to prevent LLMs from developing a bias toward any particular type of result, thereby avoiding artificially high accuracy rates.
 - **Unique answer**: For Topological Sorting, which may have multiple valid solutions, we ensure the uniqueness of the answers during the graph generation process. This facilitates the comparison between the LLMs' results and standard labels.
 
-The task generation codes are as follows:
+We have implemented graph task generation for WL graphs and EL graphs respectively. The structure of the code is as follows:
 
 
 ```shell
-/home/data2t2/wrz/GraphTool-Instruction/GTools_generation_up
-├── Shortest_Path
-│   ├── Shortest_gen_Di.py
-│   └── Shortest_gen_Un.py
-├── Path_Existence
-│   ├── Path_E_gen_Di.py
-│   └── Path_E_gen_Un.py
-├── Edge_Existence
-│   ├── Edge_E_gen_Di.py
-│   └── Edge_E_gen_Un.py
-├── Node_Count
-│   ├── Node_C_gen_Di.py
-│   └── Node_C_gen_Un.py
-├── Topo
-│   └── Topo_gen_Di.py
-├── Degree_Count
-│   ├── Degree_gen_Un.py
-│   └── Degree_gen_Di.py
-├── Edge_Count
-│   ├── Edge_C_gen_Un.py
-│   └── Edge_C_gen_Di.py
-├── Triangle
-│   └── Triangle_gen.py
-├── Cycle_Detection
-│   ├── Cycle_gen_Un.py
-│   └── Cycle_gen_Di.py
-├── Flow
-│   ├── Flow_gen_Un.py
-│   └── Flow_gen_Di.py
-└── Node_Existence
-    ├── Node_E_gen_Di.py
-    └── Node_E_gen_Un.py
+
+GTools_Generation
+├── EL
+│   └── ···
+├── EL.bash
+├── WL
+│   ├── Cycle_Detection
+│   │   ├── Cycle_gen_Di.py
+│   │   └── Cycle_gen_Un.py
+│   ├── Degree_Count
+│   │   ├── Degree_gen_Di.py
+│   │   └── Degree_gen_Un.py
+│   ├── Edge_Count
+│   │   ├── Edge_C_gen_Di.py
+│   │   └── Edge_C_gen_Un.py
+│   ├── Edge_Existence
+│   │   ├── Edge_E_gen_Di.py
+│   │   └── Edge_E_gen_Un.py
+│   ├── Flow
+│   │   ├── Flow_gen_Di.py
+│   │   └── Flow_gen_Un.py
+│   ├── Node_Count
+│   │   ├── Node_C_gen_Di.py
+│   │   └── Node_C_gen_Un.py
+│   ├── Node_Existence
+│   │   ├── Node_E_gen_Di.py
+│   │   └── Node_E_gen_Un.py
+│   ├── Path_Existence
+│   │   ├── Path_E_gen_Di.py
+│   │   └── Path_E_gen_Un.py
+│   ├── Shortest_Path
+│   │   ├── Shortest_gen_Di.py
+│   │   └── Shortest_gen_Un.py
+│   ├── Topo
+│   │   └── Topo_gen_Di.py
+│   └── Triangle
+│       └── Triangle_gen.py
+└── WL.bash
 
 ```
 ```shell
-# to fill in the following path to extract projector for the second tuning stage!
-output_path=./GTools/WL/Shortest_Path/Di
-num_examples=550
+# To fill in the following path to generate WL size graph task!
+output_path= GTools/Test/WL/Cycle_Detection/Di/cycle_Di.json
+num_examples= 500
 
-python ./GraphTool-Instruction/GTools_generation/Shortest_Path/Shortest_gen_Di.py --output_path ${output_path} --num_examples ${num_examples}
+python GTools_Generation/WL/Cycle_Detection/Cycle_gen_Di.py --output_path ${output_path} --num_examples ${num_examples}
 ```
 
-You could start the second stage tuning by filling blanks at [GraphTool-Instruction_eval.sh](scripts/eval_script/GraphTool-Instruction_eval.sh). There is an example as below: 
+
+The code structure for EL graph generation is consistent with that of WL. In the process of generating EL graphs, we have additionally introduced an `output_dir`, a directory to save the edgelist files.
+
+```shell
+# To fill in the following path to generate EL size graph task!
+output_path= GTools/Test/EL/Cycle_Detection/Di/cycle_Di.json
+output_dir= GTools/Test/EL/Cycle_Detection/Di/data
+num_examples= 500
+
+python GTools_Generation/EL/Cycle_Detection/Cycle_gen_Di.py --output_path ${output_path} --num_examples ${num_examples} --output_dir ${output_dir}
+```
+
+You could also start the task generation by executing the `WL.sh` or `EL.sh` file.
+
 
 ---------
 
@@ -235,9 +244,11 @@ You could start the second stage tuning by filling blanks at [GraphTool-Instruct
 
 Due to the fact that we use 16 T4 GPUs running in parallel during the inference process, our execution script is not suitable for most users. Therefore, we recommend assigning specific tasks to specific GPUs and running each specific task separately.
 
+Please download our model using the following link: [GraphForge](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). And for reasoning on [Llama3](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct/tree/main), [Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/tree/main) and [GLM4-9B](https://huggingface.co/THUDM/glm-4-9b-chat/tree/main), their models are also available with the corresponding links.
+
 The structure of the GraphForge folder is as follows:
 ```shell
-/home/data2t2/wrz/GraphTool-Instruction/GraphForge
+GraphForge
 ├── GF_Task_Para_Instruction.py
 ├── GF_Graph_Instruction.py
 └── GF_Task_Instruction.py
@@ -246,43 +257,57 @@ The structure of the GraphForge folder is as follows:
 
 ```shell
 # to fill in the following path to extract projector for the second tuning stage!
-model_path=/home/data2t2/wrz/LLaMA/llama3_GLandEX
-output_path=./checkpoints/stage_2
-data_path=./graph_data/all_graph_data.pt
+model_path= GraphForge/model
+instruction_path= Instruction_template/Graph_Instructon_WL.txt
+input_path= GTools/Test/WL/Cycle_Detection/Di/cycle_Di.json
+output_path_graph= GraphForge_test_WL/Cycle_Detection/Di/ans_graph_Di.json
+output_path_task= GraphForge_test_WL/Cycle_Detection/Di/ans_Di.json
+tool_template= Instruction_template/Para_Instructon.json
 
-
-
-# Example command to run the script
-python GF_Graph_Instruction.py --cuda_devices "4,5" \
+# Graph Instruction on WL-Graph
+python GraphForge/GF_Graph_Instruction.py --cuda_devices "0,1" \
     --model_path "${model_path}" \
-    --instruction_path "/home/data2t2/wrz/Graph Tools/prompt_template/prompt3.txt" \
-    --output_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/ans_Di.json" \
-    --input_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/edge_Di.json"
+    --instruction_path "${instruction_path}" \
+    --output_path "${output_path_graph}" \
+    --input_path "${input_path}"
     --max_new_tokens 4096 \
     --temperature 0.7 \
-    --top_p 0.1
+    --top_p 1
 
-# Example command to run the script
-python GF_Task_Instruction.py --cuda_devices "4,5" \
-    --model_id "/home/data2t2/wrz/LLaMA/llama3_GLandEX" \
-    --prompt_path "/home/data2t2/wrz/Graph Tools/prompt_template/prompt3.txt" \
-    --final_answer_file_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/ans_Di.json" \
-    --files_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/edge_Di.json" \
-    --api_name_to_template_path "/home/data2t2/wrz/Graph Tools/prompt_template/api_name_to_template.json" \
-    --max_new_tokens 4096 \
-    --temperature 0.7 \
-    --top_p 0.1
 
-# Example command to run the script
-python GF_Task_Para_Instruction.py --cuda_devices "4,5" \
-    --model_id "/home/data2t2/wrz/LLaMA/llama3_GLandEX" \
-    --prompt_path "/home/data2t2/wrz/Graph Tools/prompt_template/prompt3.txt" \
-    --final_answer_file_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/ans_Di.json" \
-    --files_path "/home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/edge_Di.json" \
-    --api_name_to_template_path "/home/data2t2/wrz/Graph Tools/prompt_template/api_name_to_template.json" \
+# Graph Instruction on EL-Graph, notice the path WL should be change to EL
+python GraphForge/GF_Graph_Instruction.py --cuda_devices "2,3" \
+    --model_path "${model_path}" \
+    --instruction_path "${instruction_path}" \
+    --output_path "${output_path_graph}" \
+    --input_path "${input_path}"
     --max_new_tokens 4096 \
     --temperature 0.7 \
-    --top_p 0.1
+    --top_p 1
+
+
+# Task Instruction for BGA-Task
+python GraphForge/GF_Task_Instruction.py --cuda_devices "4,5" \
+    --model_path "${model_path}" \
+    --instruction_path "${instruction_path}" \
+    --output_path "${output_path_task}" \
+    --input_path "${input_path}" \
+    --tool_template "${tool_template}" \
+    --max_new_tokens 4096 \
+    --temperature 0.7 \
+    --top_p 1
+
+
+# Task and Para Instruction for PGQ-Task
+python GraphForge/GF_Task_Para_Instruction.py --cuda_devices "6,7" \
+    --model_path "${model_path}" \
+    --instruction_path "${instruction_path}" \
+    --output_path "${output_path_task}" \
+    --input_path "${input_path}" \
+    --tool_template "${tool_template}" \
+    --max_new_tokens 4096 \
+    --temperature 0.7 \
+    --top_p 1
 ```
 ---------
 
@@ -293,7 +318,7 @@ python GF_Task_Para_Instruction.py --cuda_devices "4,5" \
 
 The structure of the Eval folder is as follows:
 ```shell
-/home/data2t2/wrz/GraphTool-Instruction/Eval
+Eval
 ├── Shortest_Path
 │   ├── Shortest_eval_Di.py
 │   └── Shortest_eval_Un.py
@@ -328,17 +353,18 @@ The structure of the Eval folder is as follows:
 
 ```
 
-We have set up individual Eval files for each task to record Total entries, Matched entries, Skipped entries, and Unmatched entries. For the unmatched entries, we will print the reason, which could be due to inaccuracies in image extraction or parameter extraction. There is an example as below: 
+We have set up individual Eval files for each task to record Total entries, Matched entries, Skipped entries, and Unmatched entries. For the unmatched entries, we will print the reason, which could be due to inaccuracies in graph extraction or parameter extraction. There is an example as below: 
 ```shell
 
-graph_path=./checkpoints/stage_2
-ans_path=./data/eval/arxiv_nc.json
+#graph_path refers to the output_path of Graph Instruction
+graph_path= GraphForge_test_WL/Cycle_Detection/Di/ans_graph_Di.json
+#ans_path refers to the output_path of Task Instruction
+ans_path= GraphForge_test_WL/Cycle_Detection/Di/ans_Di.json
 
-python Cycle_eval_Di.py  --graph_path ${graph_path} --ans_path ${ans_path} 
+python Eval/Cycle_Detection/Cycle_eval_Di.py  --graph_path ${graph_path} --ans_path ${ans_path} 
 
 ```
 ---------
-
 
 
 <span id='Training GraphTool-Instruction'/>
@@ -353,7 +379,7 @@ GraphTool-Instruction tuning paradigm consists of two stages: (1) LLaMA-Factory 
 GraphTool-Instruction is trained based on LLaMA-Factory.
 Please follow the instructions to prepare the LLaMA-Factory.
 
-```bash
+```shell
 git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
 pip install -e ".[torch,metrics]"
@@ -364,7 +390,7 @@ pip install -e ".[torch,metrics]"
 
 
 - `GTools Data`:
-  GTools is a combination of all utilized Instruction-tuning data that contain three subtasks: *graph extraction, tool name identification and tool parameter extraction*. You can download by [all_graph_data.pt]() and put it at [[./GraphTool-Instruction/graph_data]](./GraphTool-Instruction/data)
+  GTools is a combination of all utilized Instruction-tuning data that contain three subtasks: *graph extraction, tool name identification and tool parameter extraction*. You can download by [Dataset](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main) and put it at path [GTools/Train](.).
 
 <span id='Self-Supervised Instruction Tuning'/>
 
@@ -374,9 +400,9 @@ pip install -e ".[torch,metrics]"
 Our fine-tuning dataset follows the Alpaca format. To use LLaMA-Factory for model fine-tuning, we need to add the following two formats to the LLaMA-Factory/data/dataset_info.json path:
 
 
-```bash
-  "merged_once": {
-    "file_name": "${data_path}",
+```shell
+  "Graph": {
+    "file_name": "${GTools/Train/Graph.json}",
     "columns": {
     "prompt": "instruction",
     "query": "input",
@@ -384,8 +410,17 @@ Our fine-tuning dataset follows the Alpaca format. To use LLaMA-Factory for mode
     "system": "system"
     }
   },
-  "merged_twice": {
-    "file_name": "${data_path}",
+  "BGA": {
+    "file_name": "${GTools/Train/BGA.json}",
+    "columns": {
+    "prompt": "instruction",
+    "query": "input",
+    "response": "output",
+    "system": "system"
+    }
+  },
+  "PGQ": {
+    "file_name": "${GTools/Train/PGQ.json}",
     "columns": {
     "prompt": "instruction",
     "query": "input",
@@ -398,23 +433,18 @@ Our fine-tuning dataset follows the Alpaca format. To use LLaMA-Factory for mode
 
 
 
-* **Start tuning:** After the aforementioned steps, you could start the first stage tuning by filling blanks at [GraphTool-Instruction_stage1.sh](scripts/tune_script/GraphTool-Instruction_stage1.sh). There is an example as below: 
-
 
 Use the following command to run LoRA **fine-tuning** of the Llama3-8B-Instruct model under the path: examples/train_lora/llama3_lora_sft.yaml. 
 
-```bash
+```shell
 llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
 ```
 
 
 ```shell
 # Our fine-tuning parameter settings are as follows.
-model_path=../vicuna-7b-v1.5-16k
-instruct_ds=./data/stage_1/graph_matching.json
-graph_data_path=./graph_data/all_graph_data.pt
-pretra_gnn=clip_gt_arxiv
-output_model=./checkpoints/stage_1
+model_path= Llama3/model
+output_model= Llama3/lora_weight
 
 ### model
 model_name_or_path: ${model_path}
@@ -426,7 +456,7 @@ finetuning_type: lora
 lora_target: all
 
 ### dataset
-dataset: ${dataset}
+dataset: Graph, BGA, PGQ
 template: llama3
 cutoff_len: 4096
 max_samples: 100000
@@ -464,21 +494,65 @@ eval_steps: 500
 
 We could export model use the following command: 
 
-```bash
+```shell
 llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+```
+```shell
 # Our settings are as follows.
-
 ### model
-model_name_or_path: /home/user/wrz/Graph Tools/LLaMA/LLaMA3-model
-adapter_name_or_path: saves/llama3-8b/lora/GT50000
+model_name_or_path: Llama3/model
+adapter_name_or_path: Llama3/lora_weight
 template: llama3
 finetuning_type: lora
 
+
 ### export
-export_dir: models/llama3_GT50000
+export_dir: GraphForge/model
 export_size: 4
 export_device: cpu
 export_legacy_format: false
 
 ```
 
+
+<span id='Function Calling Reasoning'/>
+
+### 6. Function Calling Reasoning <a href='#all_catelogue'>[Back to Top]</a>
+
+In order to compare with closed-source large models based on Function-Calling, we implemented `GPT_FC.py` and `GLM_FC.py` based on the Function-Calling tool list template.
+
+<span id='GPT'/>
+
+#### 6.1. GPT <a href='#all_catelogue'>[Back to Top]</a>
+In order to run `GPT_FC.py`, you need to fill in the OpenAI API key first:
+```shell
+client = OpenAI(
+   api_key="xxxxxxxxxxxxxxxx",
+)
+```
+
+```shell
+#graph_path refers to the output_path of Graph Instruction
+graph_path= GTools/Test/WL/Cycle_Detection/Di/cycle_Di.json
+#ans_path refers to the output_path of Task Instruction
+ans_path= GPT_test_WL/Cycle_Detection/Di/ans_graph_Di.json
+
+python Function_Calling/GPT_FC.py  --graph_path ${graph_path} --ans_path ${ans_path} 
+```
+
+<span id='GLM'/>
+
+#### 6.2. GLM <a href='#all_catelogue'>[Back to Top]</a>
+In order to run `GLM_FC.py`, you need to fill in the ZhipuAI key first:
+```shell
+client = ZhipuAI(api_key="xxxxxxxxxxxxxxxx") 
+```
+
+```shell
+#graph_path refers to the output_path of Graph Instruction
+graph_path= GTools/Test/WL/Cycle_Detection/Di/cycle_Di.json
+#ans_path refers to the output_path of Task Instruction
+ans_path= GLM_test_WL/Cycle_Detection/Di/ans_graph_Di.json
+
+python Function_Calling/GLM_FC.py  --graph_path ${graph_path} --ans_path ${ans_path} 
+```

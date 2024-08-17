@@ -1,0 +1,133 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_0.edgelist\". The task is: you need to Find the minimum distance between a given pair of nodes. The nodes in question are: path_source=8 , path_target=18.\n\n### Response:",
+        "path": "(8,18)",
+        "shortest_path": [
+            8,
+            13,
+            4,
+            18
+        ],
+        "answer": 19,
+        "description": "Find the minimum distance between a given pair of nodes.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_0.edgelist"
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_1.edgelist\". The task is: you need to Determine the shortest path between two specific nodes in the graph. The nodes in question are: path_source=13 , path_target=7.\n\n### Response:",
+        "path": "(13,7)",
+        "shortest_path": [
+            13,
+            7
+        ],
+        "answer": 15,
+        "description": "Determine the shortest path between two specific nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_1.edgelist"
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_2.edgelist\". The task is: you need to Determine the shortest path between two specific nodes in the graph. The nodes in question are: path_source=14 , path_target=17.\n\n### Response:",
+        "path": "(14,17)",
+        "shortest_path": [
+            14,
+            18,
+            5,
+            13,
+            17
+        ],
+        "answer": 84,
+        "description": "Determine the shortest path between two specific nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_2.edgelist"
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_3.edgelist\". The task is: you need to Identify the shortest connection between two nodes in the graph. The nodes in question are: path_source=7 , path_target=14.\n\n### Response:",
+        "path": "(7,14)",
+        "shortest_path": [
+            7,
+            14
+        ],
+        "answer": 57,
+        "description": "Identify the shortest connection between two nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_3.edgelist"
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_4.edgelist\". The task is: you need to Ascertain the shortest path length between two nodes. The nodes in question are: path_source=20 , path_target=5.\n\n### Response:",
+        "path": "(20,5)",
+        "shortest_path": [
+            20,
+            15,
+            5
+        ],
+        "answer": 15,
+        "description": "Ascertain the shortest path length between two nodes.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_4.edgelist"
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_5.edgelist\". The task is: you need to Identify the shortest connection between two nodes in the graph. The nodes in question are: path_source=16 , path_target=15.\n\n### Response:",
+        "path": "(16,15)",
+        "shortest_path": [
+            16,
+            15
+        ],
+        "answer": 9,
+        "description": "Identify the shortest connection between two nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_5.edgelist"
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_6.edgelist\". The task is: you need to Ascertain the shortest path length between two nodes. The nodes in question are: path_source=29 , path_target=5.\n\n### Response:",
+        "path": "(29,5)",
+        "shortest_path": [
+            29,
+            1,
+            27,
+            5
+        ],
+        "answer": 76,
+        "description": "Ascertain the shortest path length between two nodes.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_6.edgelist"
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_7.edgelist\". The task is: you need to Ascertain the shortest path length between two nodes. The nodes in question are: path_source=34 , path_target=25.\n\n### Response:",
+        "path": "(34,25)",
+        "shortest_path": [
+            34,
+            28,
+            21,
+            25
+        ],
+        "answer": 19,
+        "description": "Ascertain the shortest path length between two nodes.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_7.edgelist"
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_8.edgelist\". The task is: you need to Determine the shortest path between two specific nodes in the graph. The nodes in question are: path_source=70 , path_target=26.\n\n### Response:",
+        "path": "(70,26)",
+        "shortest_path": [
+            70,
+            42,
+            26
+        ],
+        "answer": 49,
+        "description": "Determine the shortest path between two specific nodes in the graph.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_8.edgelist"
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Shortest_Path/Un/data/task_9.edgelist\". The task is: you need to Calculate the shortest route from one node to another. The nodes in question are: path_source=25 , path_target=46.\n\n### Response:",
+        "path": "(25,46)",
+        "shortest_path": [
+            25,
+            46
+        ],
+        "answer": 42,
+        "description": "Calculate the shortest route from one node to another.",
+        "file_path": "../GTools/Test/EL/Shortest_Path/Un/data/task_9.edgelist"
+    }
+]

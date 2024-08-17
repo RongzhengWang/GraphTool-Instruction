@@ -1,4 +1,33 @@
 {
+  "Graph": {
+    "file_name": "${GTools/Train/Graph.json}",
+    "columns": {
+    "prompt": "instruction",
+    "query": "input",
+    "response": "output",
+    "system": "system"
+    }
+  },
+  "BGA": {
+    "file_name": "${GTools/Train/BGA.json}",
+    "columns": {
+    "prompt": "instruction",
+    "query": "input",
+    "response": "output",
+    "system": "system"
+    }
+  },
+  "PGQ": {
+    "file_name": "${GTools/Train/PGQ.json}",
+    "columns": {
+    "prompt": "instruction",
+    "query": "input",
+    "response": "output",
+    "system": "system",
+    "history": "history"
+    }
+  },
+
   "identity": {
     "file_name": "identity.json"
   },
@@ -8,98 +37,6 @@
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
-
-
-  "matched_items_edge": {
-  "file_name": "matched_items_edge.json",
-  "columns": {
-    "prompt": "instruction",
-    "query": "input",
-    "response": "output",
-    "system": "system",
-    "history": "history"
-  }
-  },
-  "matched_items_path": {
-    "file_name": "matched_items_path.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "system": "system",
-      "history": "history"
-    }
-    },
-    "merged_once": {
-      "file_name": "merged_once.json",
-      "columns": {
-        "prompt": "instruction",
-        "query": "input",
-        "response": "output",
-        "system": "system"
-      }
-      },
-    "merged_twice": {
-        "file_name": "merged_twice.json",
-        "columns": {
-          "prompt": "instruction",
-          "query": "input",
-          "response": "output",
-          "system": "system",
-          "history": "history"
-        }
-        },
-    "Adjacent": {
-          "file_name": "Adjacent.json",
-          "columns": {
-            "prompt": "instruction",
-            "query": "input",
-            "response": "output",
-            "system": "system"
-          }
-          },
-    "Incident": {
-            "file_name": "Incident.json",
-            "columns": {
-              "prompt": "instruction",
-              "query": "input",
-              "response": "output",
-              "system": "system"
-            }
-            },
-    "merged": {
-              "file_name": "merged.json",
-              "columns": {
-                "prompt": "instruction",
-                "query": "input",
-                "response": "output",
-                "system": "system"
-              }
-              },
-    "merged_EL": {
-              "file_name": "merged_EL.json",
-              "columns": {
-                "prompt": "instruction",
-                "query": "input",
-                "response": "output",
-                "system": "system"
-              }
-              },
-  "dataset_name": {
-    "file_name": "dataset_name.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "system": "system",
-      "history": "history"
-    }
-    },
-  
-
-
-
-
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",

@@ -109,5 +109,3 @@ if __name__ == "__main__":
 
     main(args.graph_path, args.ans_path)
 
-
-# python Edge_E_eval_Di.py --graph_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/ans_graph_Di.json --ans_path /home/data2t2/wrz/GraphTool-Instruction/GraphForge_test_WL/Edge_Existence/Di/ans_Di.json

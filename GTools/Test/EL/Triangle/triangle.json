@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_0.edgelist\". The task is: you need to Identify the triangle with the maximum sum of edge weights.\n\n### Response:",
+        "triangle": "(3, 9, 13)",
+        "max_triangle_sum": 267,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_0.edgelist",
+        "description": "Identify the triangle with the maximum sum of edge weights."
+    },
+    {
+        "id": 1,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_1.edgelist\". The task is: you need to Identify the triangle with the maximum sum of edge weights.\n\n### Response:",
+        "triangle": "(1, 2, 5)",
+        "max_triangle_sum": 277,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_1.edgelist",
+        "description": "Identify the triangle with the maximum sum of edge weights."
+    },
+    {
+        "id": 2,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_2.edgelist\". The task is: you need to Calculate the highest sum of weights in any triangle.\n\n### Response:",
+        "triangle": "(3, 15, 20)",
+        "max_triangle_sum": 274,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_2.edgelist",
+        "description": "Calculate the highest sum of weights in any triangle."
+    },
+    {
+        "id": 3,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_3.edgelist\". The task is: you need to Determine the triangle with the highest total weight.\n\n### Response:",
+        "triangle": "(0, 2, 9)",
+        "max_triangle_sum": 297,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_3.edgelist",
+        "description": "Determine the triangle with the highest total weight."
+    },
+    {
+        "id": 4,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_4.edgelist\". The task is: you need to Find the maximum triangle sum in the graph.\n\n### Response:",
+        "triangle": "(0, 11, 12)",
+        "max_triangle_sum": 296,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_4.edgelist",
+        "description": "Find the maximum triangle sum in the graph."
+    },
+    {
+        "id": 5,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_5.edgelist\". The task is: you need to Calculate the highest sum of weights in any triangle.\n\n### Response:",
+        "triangle": "(1, 18, 24)",
+        "max_triangle_sum": 270,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_5.edgelist",
+        "description": "Calculate the highest sum of weights in any triangle."
+    },
+    {
+        "id": 6,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_6.edgelist\". The task is: you need to Find the maximum triangle sum in the graph.\n\n### Response:",
+        "triangle": "(5, 9, 12)",
+        "max_triangle_sum": 220,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_6.edgelist",
+        "description": "Find the maximum triangle sum in the graph."
+    },
+    {
+        "id": 7,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_7.edgelist\". The task is: you need to Identify the triangle with the maximum sum of edge weights.\n\n### Response:",
+        "triangle": "(18, 25, 28)",
+        "max_triangle_sum": 261,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_7.edgelist",
+        "description": "Identify the triangle with the maximum sum of edge weights."
+    },
+    {
+        "id": 8,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_8.edgelist\". The task is: you need to Find the maximum triangle sum in the graph.\n\n### Response:",
+        "triangle": "(2, 13, 36)",
+        "max_triangle_sum": 290,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_8.edgelist",
+        "description": "Find the maximum triangle sum in the graph."
+    },
+    {
+        "id": 9,
+        "prompt": "Below is an instruction that describes a task. Write a response that determines use which API to complete the task.\n\n### Instruction:\nGiven an undirected graph, the edges are in an edgelist file, the path is \"../GTools/Test/EL/Triangle/data/task_9.edgelist\". The task is: you need to Identify the triangle with the maximum sum of edge weights.\n\n### Response:",
+        "triangle": "(8, 24, 25)",
+        "max_triangle_sum": 273,
+        "file_path": "../GTools/Test/EL/Triangle/data/task_9.edgelist",
+        "description": "Identify the triangle with the maximum sum of edge weights."
+    }
+]
