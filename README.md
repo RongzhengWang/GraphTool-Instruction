@@ -43,7 +43,7 @@ Please download our model and datasets using the following link: [Huggingface](h
   * <a href='#Running Evaluation'>4.3. Running Evaluation</a>
 * <a href='#Training GraphTool-Instruction'>5. Training GraphTool-Instruction </a>
   * <a href='#Prepare Pre-trained Checkpoint'>5.1. Prepare Pre-trained Checkpoint</a>
-  * <a href='#Self-Supervised Instruction Tuning'>5.2. Self-Supervised Instruction Tuning</a>
+  * <a href='#LoRA Tuning'>5.2. LoRA Tuning</a>
   * <a href='#Export Model'>5.3. Export Model</a>
 * <a href='#Function Calling Reasoning'>6. Function Calling Reasoning </a>
   * <a href='#GPT'>6.1. GPT</a>
@@ -371,7 +371,7 @@ python Eval/Cycle_Detection/Cycle_eval_Di.py  --graph_path ${graph_path} --ans_p
 
 ### 5. Training GraphTool-Instruction <a href='#all_catelogue'>[Back to Top]</a>
 
-GraphTool-Instruction tuning paradigm consists of two stages: (1) LLaMA-Factory Installation; (2) LoRA Tuning.
+GraphTool-Instruction tuning paradigm consists of two stages: (1) LLaMA-Factory Installation; (2) LoRA Tuning; (3) Export Model.
 
 <span id='Prepare Pre-trained Checkpoint'/>
 
@@ -390,14 +390,13 @@ pip install -e ".[torch,metrics]"
 
 
 - `GTools Data`:
-  GTools is a combination of all utilized Instruction-tuning data that contain three subtasks: *graph extraction, tool name identification and tool parameter extraction*. You can download by [Dataset](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main) and put it at path [GTools/Train](.).
+  GTools is a combination of all utilized Instruction-tuning data that contain three subtasks: *graph extraction, tool name identification and tool parameter extraction*. You can download by [Dataset](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main) and put it at repo path `GTools/Train`.
 
-<span id='Self-Supervised Instruction Tuning'/>
+<span id='LoRA Tuning'/>
 
-#### 5.2. Self-Supervised Instruction Tuning  <a href='#all_catelogue'>[Back to Top]</a>
+#### 5.2. LoRA Tuning  <a href='#all_catelogue'>[Back to Top]</a>
 
-* **Prepare data:** Please download our instruction tuning data [graph_matching.json]() for the graph matching task.
-Our fine-tuning dataset follows the Alpaca format. To use LLaMA-Factory for model fine-tuning, we need to add the following two formats to the LLaMA-Factory/data/dataset_info.json path:
+* **Prepare data:** Please download our instruction tuning data first. Our fine-tuning dataset follows the Alpaca format. To use LLaMA-Factory for model fine-tuning, we need to add the following three formats to the LLaMA-Factory/data/dataset_info.json path:
 
 
 ```shell
