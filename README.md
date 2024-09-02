@@ -13,6 +13,9 @@ This project aims to leverage **GraphTool-Instruction**, an innovative instructi
 - **Improvements.** By incorporating Graph-Instruction and Parameter-Instruction, GraphTool-Instruction significantly improves the accuracy of Tool-Instruction, and achieves state-of-the-art results among all Tool-Instruction methods, except being 1% behind GPT-4o-FC.
 - **New metrics.** We have introduced three new evaluation metrics: *Graph*, *Tool Name* and *Tool Parameter* to enhance the reliability of our dataset. Furthermore, we utilize the accuracy rates of these three metrics to deeply analyze the factors that affect the tool execution results.
 
+<div align="center">
+<img src="pics\method.png" width="800px">
+</div>
 
 **Notice:** For convenience, we have made the following definitions:
 - To assess and enhance the capabilities of LLMs in processing graphs of various sizes, we establish a benchmark using the commonly accepted maximum token length of 4096 for current LLMs. This threshold serves to categorize graph sizes into:
@@ -22,6 +25,11 @@ This project aims to leverage **GraphTool-Instruction**, an innovative instructi
   1. **BGA-Task**: *Basic Graph Analysis Task* which generally requires information on the graph structure and the tool name such as Cycle Detection.
   2. **PGQ-Task**:  *Parametric Graph Query Task* with the necessity for additional parameter inputs, *e.g.*, the Shortest Path necessitates the starting and ending nodes. 
 
+And our entire work flow can be summarized as follows:
+
+<div align="center">
+<img src="pics\Flow.png" width="800px">
+</div>
 
 
 ### Data Release
@@ -36,9 +44,9 @@ Please download our model and datasets using the following link: [Huggingface](h
 ### Table of Contents:
 * <a href='#Code Structure'>1. Code Structure</a>
 * <a href='#Environment Preparation'>2. Environment Preparation </a>
-* <a href='#Task-Instruction Preparation'>3. Task-Instruction Preparation </a>
+* <a href='#Graph Reasoning Task Preparation'>3. Graph Reasoning Task Preparation </a>
 * <a href='#Evaluating GraphTool-Instruction'>4. Evaluating GraphTool-Instruction</a>
-  * <a href='#Preparing Data'>4.1. Preparing Data</a>
+  * <a href='#Task-Instruction Preparation'>4.1. Task-Instruction Preparation</a>
   * <a href='#Reasoning on GraphForge'>4.2. Reasoning on GraphForge</a>
   * <a href='#Running Evaluation'>4.3. Running Evaluation</a>
 * <a href='#Training GraphTool-Instruction'>5. Training GraphTool-Instruction </a>
@@ -128,38 +136,11 @@ cd GraphTool-Instruction
 pip install -r requirements.txt
 ```
 
-<span id='Task-Instruction Preparation'/>
+<span id='Graph Reasoning Task Preparation'/>
 
 
 
-### 3. Task-Instruction Preparation  <a href='#all_catelogue'>[Back to Top]</a>
-To construct the Task-Instruction, we manually create a tool set. For each tool, we define four attributes: Tool Name, Tool Description, Tool Parameters and Return type. This set is intended to inform LLMs about the appropriate graph reasoning tasks for each tool. Based on the predefined tool set, we add some general descriptions of the expected format to constrain the output from LLMs. An example of the set of tools and general descriptions is presented as follows:
-```shell
-{'name': 'shortest_path', 
-    'description': 'Given a graph G, a source node and a target node, compute shortest paths in the graph.', 
-    'parameters': (graph = G, path_source= , path_target= ),
-    'return_type': Int
-  },
-```
-
-For PGQ-Tasks, we specifically employ Parameter-Instruction to further standardize the format of parameters extracted by Task-Instruction. At first, We propose *Tool Template Retriever*, which identifies the tool name based on previous Task-Instruction and then retrieves the corresponding tool template from the tool set. Second, we combine the searched tool template with Parameter-Instruction as a new input to get highly accurate tool parameters. An example of the Parameter-Instruction is presented as follows:
-```shell
-"shortest_path": 
-    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, path_source=0 , path_target=1)\n###",
-    
-```
-
-
-<span id='Evaluating GraphTool-Instruction'/>
-
-## 4. Evaluating GraphTool-Instruction  <a href='#all_catelogue'>[Back to Top]</a>
-
-<span id='Preparing Data'/>
-
-**Notice:** Due to the fact that we use 16 T4 GPUs running in parallel during the inference process, our execution script is not suitable for most users. Therefore, we recommend assigning specific tasks to specific GPUs and running each specific task separately.
-
-#### 4.1. Preparing Data <a href='#all_catelogue'>[Back to Top]</a>
-
+### 3. Graph Reasoning Task Preparation  <a href='#all_catelogue'>[Back to Top]</a>
 We design graph task generation code for eleven categories, comprising a total of twenty tasks. During the generation process, we adhered to the following rules:
 
 - **Diverse sizes**: For WL-Graph, we ensure that graphs cover a node range from 2 to 40 and an edge range for a maximum of 300 to examine the LLMs' capabilities to handle graph information. Additionally, EL-Graph accommodates larger structures, with node counts ranging from 41 to 100 and up to 1,000 edges.
@@ -235,6 +216,32 @@ You could also start the task generation by executing the `WL.sh` or `EL.sh` fil
 
 
 ---------
+
+
+<span id='Evaluating GraphTool-Instruction'/>
+
+## 4. Evaluating GraphTool-Instruction  <a href='#all_catelogue'>[Back to Top]</a>
+
+<span id='Task-Instruction Preparation'/>
+
+**Notice:** Due to the fact that we use 16 T4 GPUs running in parallel during the inference process, our execution script is not suitable for most users. Therefore, we recommend assigning specific tasks to specific GPUs and running each specific task separately.
+
+#### 4.1. Task-Instruction Preparation <a href='#all_catelogue'>[Back to Top]</a>
+To construct the Task-Instruction, we manually create a tool set. For each tool, we define four attributes: Tool Name, Tool Description, Tool Parameters and Return type. This set is intended to inform LLMs about the appropriate graph reasoning tasks for each tool. Based on the predefined tool set, we add some general descriptions of the expected format to constrain the output from LLMs. An example of the set of tools and general descriptions is presented as follows:
+```shell
+{'name': 'shortest_path', 
+    'description': 'Given a graph G, a source node and a target node, compute shortest paths in the graph.', 
+    'parameters': (graph = G, path_source= , path_target= ),
+    'return_type': Int
+  },
+```
+
+For PGQ-Tasks, we specifically employ Parameter-Instruction to further standardize the format of parameters extracted by Task-Instruction. At first, We propose *Tool Template Retriever*, which identifies the tool name based on previous Task-Instruction and then retrieves the corresponding tool template from the tool set. Second, we combine the searched tool template with Parameter-Instruction as a new input to get highly accurate tool parameters. An example of the Parameter-Instruction is presented as follows:
+```shell
+"shortest_path": 
+    "The answer is correct, keep the original answer and the parameters' order, since I have get the API_Name so I only need you to provide API input strictly following my template definition.\nThe example is as follow:\n###\nAPI_Input: (graph = G, path_source=0 , path_target=1)\n###",
+    
+```
 
 
 
