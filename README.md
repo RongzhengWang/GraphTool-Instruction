@@ -249,8 +249,6 @@ For PGQ-Tasks, we specifically employ Parameter-Instruction to further standardi
 
 #### 4.2. Reasoning on GraphForge<a href='#all_catelogue'>[Back to Top]</a>
 
-Due to the fact that we use 16 T4 GPUs running in parallel during the inference process, our execution script is not suitable for most users. Therefore, we recommend assigning specific tasks to specific GPUs and running each specific task separately.
-
 Please download our model using the following link: [GraphForge](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). And for reasoning on [Llama3](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct/tree/main), [Llama3.1](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/tree/main) and [GLM4-9B](https://huggingface.co/THUDM/glm-4-9b-chat/tree/main), their models are also available with the corresponding links.
 
 The structure of the GraphForge folder is as follows:
