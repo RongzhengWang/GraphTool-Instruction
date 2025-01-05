@@ -6,8 +6,3 @@ Output:
 path: "GraphTools/1EL_graph/All_type_mission_directed/twice/data/shortest0.edgelist" 
 Now here is a new task:
 Input:
-
-
-      
-
-
