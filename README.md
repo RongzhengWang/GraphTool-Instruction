@@ -34,7 +34,7 @@ And our entire work flow can be summarized as follows:
 
 ### Data Release
 
-Please download our model using the following link: [Huggingface](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). 
+Please download our model and dataset using the following link: [Huggingface](https://huggingface.co/GraphTool/GraphTool-Instruction/tree/main). 
  
 
 ## Getting Started
