@@ -7,7 +7,7 @@ Tool_Para:
 
 Remember: 
 1.All the thought is short, at most in 5 sentence.
-2. Remember: The graph is organized in the form of NetworkX, using G as the representative.
+2.Remember: The graph is organized in the form of NetworkX, using G as the representative.
 ----
 Specifically, you have access to the following APIs:
 [
